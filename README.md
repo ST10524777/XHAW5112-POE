@@ -30,3 +30,6 @@ Summary
 Overall we started with setting up our groups, identifying responsibilities, created our wireframes, mobile app and web page. For our final task we improved our web page, created our presentations, completed our peer assessments and created our final report.
 Group Members:
 Tshegofatso Moela Nikhil Thato
+
+### IMPORTANT
+The updated website is in the 'website branch and the PowerPoint presentation has been uploaded to this repo as a PDF.
