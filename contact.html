@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="css/style.css">
+<title>Contact Us - Pawsitive Pet Academy</title>
+</head>
+<body>
+
+<div class="wrapper">
+  <header class="site-header">
+    <div class="header-content">
+      <div class="logo-container">
+        <a href="index.html"><img src="images/logo.png" alt="Pawsitive Pet Academy logo"></a>
+      </div>
+      <div class="header-titles">
+        <h1>Pawsitive Pet Academy</h1>
+        <p class="tagline">Caring, Trustworthy &amp; Professional</p>
+      </div>
+    </div>
+  </header>
+
+  <nav class="site-nav">
+    <ul class="nav-list">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="story.html">Our Story</a></li>
+      <li class="dropdown">
+        <a href="courses.html" class="dropbtn">Courses &#9662;</a>
+        <div class="dropdown-content">
+          <a href="obedience.html">Canine Obedience Training</a>
+          <a href="grooming.html">Pet Grooming</a>
+          <a href="behaviour.html">Animal Behaviour</a>
+          <a href="business.html">Pet Business Management</a>
+          <a href="puppy.html">Puppy Care</a>
+          <a href="firstaid.html">Pet First Aid</a>
+          <a href="walking.html">Basic Dog Walking</a>
+        </div>
+      </li>
+      <li><a href="pricing.html">Course Fees</a></li>
+      <li><a href="quote.html">Quote Calculator</a></li>
+      <li><a href="contact.html" class="active">Contact</a></li>
+    </ul>
+  </nav>
+
+  <main class="page-content">
+    <h2>Contact Us</h2>
+    <p>Pawsitive Pet Academy - Durban</p>
+    
+    <div id="formError" style="color: #c0392b; margin-bottom: 12px; font-weight: bold;"></div>
+    <div id="formSuccess" style="color: #1e7e46; margin-bottom: 12px; font-weight: bold;"></div>
+
+    <form id="contactForm" method="post" novalidate>
+      <div style="display: flex; flex-direction: column; gap: 15px; max-width: 500px;">
+        <div>
+          <label for="fullname"><b>Your Full Name:</b></label><br>
+          <input type="text" id="fullname" name="fullname">
+        </div>
+        <div>
+          <label for="email"><b>Email Address:</b></label><br>
+          <input type="email" id="email" name="email">
+        </div>
+        <div>
+          <label for="phone"><b>Phone Number:</b></label><br>
+          <input type="tel" id="phone" name="phone">
+        </div>
+        <div>
+          <label for="message"><b>Your Message (Optional):</b></label><br>
+          <textarea id="message" name="message" rows="5"></textarea>
+        </div>
+        <div>
+          <input type="submit" value="Send My Information Request">
+        </div>
+      </div>
+    </form>
+    
+    <div style="margin-top: 30px;">
+      <a href="courses.html" class="btn-primary" style="background-color: #979daa;">Back to Courses</a>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <p>&copy; 2026 Pawsitive Pet Academy - Durban &nbsp;|&nbsp; Caring, Trustworthy &amp; Professional</p>
+  </footer>
+</div>
+
+<script src="js/main.js"></script>
+</body>
+</html>

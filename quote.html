@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="css/style.css">
+<title>Quote Calculator - Pawsitive Pet Academy</title>
+</head>
+<body>
+
+<div class="wrapper">
+  <header class="site-header">
+    <div class="header-content">
+      <div class="logo-container">
+        <a href="index.html"><img src="images/logo.png" alt="Pawsitive Pet Academy logo"></a>
+      </div>
+      <div class="header-titles">
+        <h1>Pawsitive Pet Academy</h1>
+        <p class="tagline">Caring, Trustworthy &amp; Professional</p>
+      </div>
+    </div>
+  </header>
+
+  <nav class="site-nav">
+    <ul class="nav-list">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="story.html">Our Story</a></li>
+      <li class="dropdown">
+        <a href="courses.html" class="dropbtn">Courses &#9662;</a>
+        <div class="dropdown-content">
+          <a href="obedience.html">Canine Obedience Training</a>
+          <a href="grooming.html">Pet Grooming</a>
+          <a href="behaviour.html">Animal Behaviour</a>
+          <a href="business.html">Pet Business Management</a>
+          <a href="puppy.html">Puppy Care</a>
+          <a href="firstaid.html">Pet First Aid</a>
+          <a href="walking.html">Basic Dog Walking</a>
+        </div>
+      </li>
+      <li><a href="pricing.html">Course Fees</a></li>
+      <li><a href="quote.html" class="active">Quote Calculator</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+
+  <main class="page-content">
+    <h2>Quote Calculator</h2>
+    <p>Select the courses you would like to enroll in to calculate your total fee.</p>
+    
+    <form id="quoteForm">
+      <div class="table-responsive">
+        <table class="data-table">
+          <thead>
+            <tr>
+              <th>Select</th>
+              <th>Course</th>
+              <th>Length</th>
+              <th style="text-align: right;">Fee</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><input type="checkbox" name="course" value="1500" data-name="Canine Obedience Training"></td>
+              <td>Canine Obedience Training</td>
+              <td>6 Months</td>
+              <td style="text-align: right;">R1500</td>
+            </tr>
+            <tr>
+              <td><input type="checkbox" name="course" value="1500" data-name="Pet Grooming"></td>
+              <td>Pet Grooming</td>
+              <td>6 Months</td>
+              <td style="text-align: right;">R1500</td>
+            </tr>
+            <tr>
+              <td><input type="checkbox" name="course" value="1500" data-name="Animal Behaviour"></td>
+              <td>Animal Behaviour</td>
+              <td>6 Months</td>
+              <td style="text-align: right;">R1500</td>
+            </tr>
+            <tr>
+              <td><input type="checkbox" name="course" value="1500" data-name="Pet Business Management"></td>
+              <td>Pet Business Management</td>
+              <td>6 Months</td>
+              <td style="text-align: right;">R1500</td>
+            </tr>
+            <tr>
+              <td><input type="checkbox" name="course" value="750" data-name="Puppy Care"></td>
+              <td>Puppy Care</td>
+              <td>6 Weeks</td>
+              <td style="text-align: right;">R750</td>
+            </tr>
+            <tr>
+              <td><input type="checkbox" name="course" value="750" data-name="Pet First Aid"></td>
+              <td>Pet First Aid</td>
+              <td>6 Weeks</td>
+              <td style="text-align: right;">R750</td>
+            </tr>
+            <tr>
+              <td><input type="checkbox" name="course" value="750" data-name="Basic Dog Walking"></td>
+              <td>Basic Dog Walking</td>
+              <td>6 Weeks</td>
+              <td style="text-align: right;">R750</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      
+      <div class="quote-summary" style="margin-top: 20px; padding: 20px; background: #eef1f6; border: 1px solid #979daa; border-radius: 6px;">
+        <h3 style="margin: 0;">Estimated Total: <span id="totalFee">R0</span></h3>
+        <div id="selectedCoursesList" style="margin-top: 10px; font-size: 14px; color: #1a2c60;"></div>
+      </div>
+      
+      <div style="margin-top: 20px;">
+        <button type="button" id="calcBtn" class="btn-primary">Calculate Total</button>
+      </div>
+    </form>
+  </main>
+
+  <footer class="site-footer">
+    <p>&copy; 2026 Pawsitive Pet Academy - Durban &nbsp;|&nbsp; Caring, Trustworthy &amp; Professional</p>
+  </footer>
+</div>
+
+<script src="js/main.js"></script>
+</body>
+</html>

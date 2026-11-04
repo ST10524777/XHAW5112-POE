@@ -1,0 +1,482 @@
+/* Pawsitive Pet Academy - style.css (Fully Responsive & Full-Width) */
+
+:root {
+  --navy: #1a2c60;
+  --blue: #1b4de3;
+  --grey: #979daa;
+  --light-bg: #ffffff;
+  --text-dark: #000000;
+  --hover-blue: #143cb5;
+}
+
+html {
+  -webkit-text-size-adjust: 100%;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: var(--grey);
+  color: var(--text-dark);
+  font-family: Verdana, Geneva, sans-serif;
+  line-height: 1.6;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Base Wrapper - Full Width for Windows & Mobile Screens */
+.wrapper {
+  width: 100%;
+  min-height: 100vh;
+  margin: 0 auto;
+  background-color: var(--light-bg);
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+}
+
+/* Header */
+.site-header {
+  background-color: var(--navy);
+  padding: 20px 5%;
+  width: 100%;
+}
+
+.header-content {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 20px;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.logo-container img {
+  width: 90px;
+  height: 90px;
+  object-fit: contain;
+  display: block;
+}
+
+.header-titles h1 {
+  font-family: Georgia, 'Times New Roman', serif;
+  color: #ffffff;
+  font-size: clamp(24px, 4vw, 38px);
+  margin: 0 0 5px 0;
+}
+
+.header-titles .tagline {
+  font-family: 'Trebuchet MS', Helvetica, sans-serif;
+  color: var(--grey);
+  font-size: clamp(14px, 2vw, 18px);
+  font-style: italic;
+  margin: 0;
+}
+
+/* Navigation Bar */
+.site-nav {
+  background-color: var(--blue);
+  width: 100%;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+}
+
+.nav-list {
+  list-style: none;
+  margin: 0 auto;
+  padding: 0 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  max-width: 1400px;
+  min-height: 48px;
+}
+
+.nav-list li {
+  position: relative;
+  display: inline-block;
+}
+
+.nav-list li a {
+  font-family: 'Trebuchet MS', Helvetica, sans-serif;
+  color: #ffffff;
+  font-size: 14px;
+  text-decoration: none;
+  font-weight: bold;
+  padding: 12px 16px;
+  display: block;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.nav-list li a:hover,
+.nav-list li a.active {
+  background-color: var(--navy);
+  text-decoration: none;
+}
+
+/* Dropdown Menu styling */
+.dropdown .dropbtn {
+  cursor: pointer;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: var(--navy);
+  min-width: 240px;
+  box-shadow: 0px 8px 20px rgba(0,0,0,0.3);
+  z-index: 1000;
+  text-align: left;
+  padding: 8px 0;
+  border-radius: 0 0 6px 6px;
+}
+
+.dropdown-content a {
+  color: #ffffff;
+  padding: 10px 18px;
+  display: block;
+  font-size: 13px;
+  white-space: nowrap;
+  font-weight: normal;
+}
+
+.dropdown-content a:hover {
+  background-color: var(--blue);
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+/* Page Content Container */
+.page-content {
+  flex: 1;
+  width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 30px 5%;
+  box-sizing: border-box;
+}
+
+.page-content h1, 
+.page-content h2 {
+  font-family: Georgia, 'Times New Roman', serif;
+  color: var(--blue);
+  margin-top: 0;
+  font-size: clamp(22px, 3.5vw, 32px);
+}
+
+.page-content h3 {
+  font-family: 'Trebuchet MS', Helvetica, sans-serif;
+  color: var(--navy);
+  font-size: clamp(16px, 2.5vw, 22px);
+}
+
+/* Banner Image */
+.banner-container {
+  width: 100%;
+  margin-bottom: 25px;
+  overflow: hidden;
+  border-radius: 8px;
+}
+
+.banner-img {
+  width: 100%;
+  max-height: 400px;
+  object-fit: cover;
+  display: block;
+  border-radius: 8px;
+}
+
+/* Grid layout for Cards (Home Page) */
+.cards-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 25px;
+  margin-top: 25px;
+}
+
+.card {
+  background-color: #ffffff;
+  border: 1px solid var(--grey);
+  border-radius: 8px;
+  padding: 20px;
+  text-align: center;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 18px rgba(0,0,0,0.12);
+}
+
+.card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 6px;
+  margin-bottom: 12px;
+}
+
+.card h3 {
+  margin: 10px 0 8px 0;
+}
+
+.card p {
+  font-size: 14px;
+  margin-bottom: 15px;
+}
+
+.card a.read-more, 
+.course-info a.read-more {
+  color: var(--blue);
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 14px;
+}
+
+.card a.read-more:hover, 
+.course-info a.read-more:hover {
+  text-decoration: underline;
+}
+
+/* Courses List Layout */
+.section-header {
+  background-color: var(--navy);
+  color: #ffffff;
+  font-family: 'Trebuchet MS', Helvetica, sans-serif;
+  font-size: 18px;
+  padding: 12px 18px;
+  margin: 25px 0 15px 0;
+  font-weight: bold;
+  border-radius: 6px;
+}
+
+.course-item {
+  display: flex;
+  gap: 20px;
+  align-items: flex-start;
+  padding: 15px 0;
+}
+
+.course-img img {
+  width: 240px;
+  height: 160px;
+  object-fit: cover;
+  border-radius: 6px;
+  border: 1px solid var(--grey);
+}
+
+.course-info {
+  flex: 1;
+}
+
+.course-info h3 {
+  margin-top: 0;
+}
+
+.course-info h3 a {
+  font-family: Georgia, 'Times New Roman', serif;
+  color: var(--blue);
+  text-decoration: none;
+}
+
+.course-info h3 a:hover {
+  text-decoration: underline;
+}
+
+.course-info .fee {
+  font-family: 'Courier New', Courier, monospace;
+  color: var(--navy);
+  font-size: 15px;
+  font-weight: bold;
+  margin: 6px 0;
+}
+
+hr {
+  border: none;
+  border-top: 1px solid var(--grey);
+  margin: 15px 0;
+}
+
+/* Tables Styling - Fully Responsive with Horizontal Scroll on Mobile */
+.table-responsive {
+  width: 100%;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  margin-top: 20px;
+}
+
+.data-table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: var(--grey);
+}
+
+.data-table th {
+  background-color: var(--navy);
+  color: #ffffff;
+  font-family: 'Trebuchet MS', Helvetica, sans-serif;
+  font-size: 14px;
+  padding: 12px 15px;
+  text-align: left;
+}
+
+.data-table td {
+  background-color: #ffffff;
+  padding: 12px 15px;
+  font-size: 14px;
+  border: 1px solid var(--grey);
+}
+
+.data-table tr:nth-child(even) td {
+  background-color: #f8f9fa;
+}
+
+.data-table tr:hover td {
+  background-color: #eef2fd;
+}
+
+.price-tag {
+  font-family: 'Courier New', Courier, monospace;
+  color: var(--blue);
+  font-size: 16px;
+  font-weight: bold;
+}
+
+/* Detail Page Layouts */
+.detail-grid {
+  display: flex;
+  gap: 25px;
+  align-items: flex-start;
+}
+
+.detail-img {
+  width: 320px;
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+  border: 1px solid var(--grey);
+}
+
+/* Buttons & Input Elements */
+input[type="text"], 
+input[type="email"], 
+input[type="tel"], 
+textarea {
+  width: 100%;
+  max-width: 500px;
+  box-sizing: border-box;
+  padding: 10px 12px;
+  border: 1px solid var(--grey);
+  border-radius: 6px;
+  font-family: Verdana, Geneva, sans-serif;
+  font-size: 14px;
+}
+
+input[type="submit"], 
+.btn-primary {
+  background-color: var(--blue);
+  color: #ffffff;
+  border: none;
+  padding: 12px 24px;
+  font-weight: bold;
+  cursor: pointer;
+  font-family: 'Trebuchet MS', Helvetica, sans-serif;
+  font-size: 15px;
+  text-decoration: none;
+  display: inline-block;
+  border-radius: 6px;
+  transition: background-color 0.2s ease;
+}
+
+input[type="submit"]:hover, 
+.btn-primary:hover {
+  background-color: var(--hover-blue);
+}
+
+/* Footer */
+.site-footer {
+  background-color: #000000;
+  color: var(--grey);
+  text-align: center;
+  padding: 18px 20px;
+  margin-top: auto;
+  font-size: 12px;
+  font-family: Verdana, Geneva, sans-serif;
+  width: 100%;
+}
+
+.site-footer p {
+  margin: 0;
+}
+
+/* Media Queries for Desktop & Mobile Optimization */
+@media (max-width: 900px) {
+  .course-item {
+    flex-direction: column;
+  }
+  .course-img img {
+    width: 100%;
+    height: 200px;
+  }
+  .detail-grid {
+    flex-direction: column;
+  }
+  .detail-img {
+    width: 100%;
+  }
+}
+
+@media (max-width: 700px) {
+  .site-header {
+    padding: 15px 4%;
+  }
+  .header-content {
+    flex-direction: column;
+    text-align: center;
+    gap: 10px;
+  }
+  .nav-list {
+    flex-direction: column;
+    padding: 5px 0;
+  }
+  .nav-list li {
+    width: 100%;
+    text-align: center;
+  }
+  .nav-list li a {
+    padding: 10px;
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+  }
+  .dropdown-content {
+    position: static;
+    box-shadow: none;
+    background-color: #142145;
+    width: 100%;
+    text-align: center;
+    border-radius: 0;
+  }
+  .dropdown-content a {
+    padding: 8px 15px;
+  }
+  .page-content {
+    padding: 20px 4%;
+  }
+}
