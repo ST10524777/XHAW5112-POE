@@ -33,4 +33,4 @@ Tshegofatso Moela Nikhil Thato
 
 ### IMPORTANT
 The updated website is in the 'website branch and the PowerPoint presentation has been uploaded to this repo as a PDF.
-Presentation.pptx
+[https://1drv.ms/p/c/0A3E4A61C5555391/IQBGUJl8IlCsSrbJiwjE7i3CAcgTh09XGOvGG_D0nY5Qviw?e=PCk6cz](url)
